@@ -63,6 +63,9 @@ function Home() {
           <Link to="/plan">Day by day</Link>
         </Button>
         <Button variant="secondary" asChild>
+          <Link to="/brief">Crew briefing</Link>
+        </Button>
+        <Button variant="ghost" asChild>
           <Link to="/train">How we cross</Link>
         </Button>
         <Button variant="ghost" asChild>
@@ -70,6 +73,9 @@ function Home() {
         </Button>
         <Button variant="ghost" asChild>
           <Link to="/admin">Booking list</Link>
+        </Button>
+        <Button variant="ghost" asChild>
+          <Link to="/security">Security</Link>
         </Button>
       </div>
 

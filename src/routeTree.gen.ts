@@ -12,12 +12,14 @@ import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AdminRouteImport } from './routes/admin'
 import { Route as AgentsRouteImport } from './routes/agents'
+import { Route as BriefRouteImport } from './routes/brief'
 import { Route as BudgetRouteImport } from './routes/budget'
 import { Route as FlightsRouteImport } from './routes/flights'
 import { Route as IstanbulRouteImport } from './routes/istanbul'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as PlanRouteImport } from './routes/plan'
 import { Route as RomaniaRouteImport } from './routes/romania'
+import { Route as SecurityRouteImport } from './routes/security'
 import { Route as TrainRouteImport } from './routes/train'
 
 const IndexRoute = IndexRouteImport.update({
@@ -33,6 +35,11 @@ const AdminRoute = AdminRouteImport.update({
 const AgentsRoute = AgentsRouteImport.update({
   id: '/agents',
   path: '/agents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const BriefRoute = BriefRouteImport.update({
+  id: '/brief',
+  path: '/brief',
   getParentRoute: () => rootRouteImport,
 } as any)
 const BudgetRoute = BudgetRouteImport.update({
@@ -65,6 +72,11 @@ const RomaniaRoute = RomaniaRouteImport.update({
   path: '/romania',
   getParentRoute: () => rootRouteImport,
 } as any)
+const SecurityRoute = SecurityRouteImport.update({
+  id: '/security',
+  path: '/security',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const TrainRoute = TrainRouteImport.update({
   id: '/train',
   path: '/train',
@@ -75,24 +87,28 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/admin': typeof AdminRoute
   '/agents': typeof AgentsRoute
+  '/brief': typeof BriefRoute
   '/budget': typeof BudgetRoute
   '/flights': typeof FlightsRoute
   '/istanbul': typeof IstanbulRoute
   '/map': typeof MapRoute
   '/plan': typeof PlanRoute
   '/romania': typeof RomaniaRoute
+  '/security': typeof SecurityRoute
   '/train': typeof TrainRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/admin': typeof AdminRoute
   '/agents': typeof AgentsRoute
+  '/brief': typeof BriefRoute
   '/budget': typeof BudgetRoute
   '/flights': typeof FlightsRoute
   '/istanbul': typeof IstanbulRoute
   '/map': typeof MapRoute
   '/plan': typeof PlanRoute
   '/romania': typeof RomaniaRoute
+  '/security': typeof SecurityRoute
   '/train': typeof TrainRoute
 }
 export interface FileRoutesById {
@@ -100,12 +116,14 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/admin': typeof AdminRoute
   '/agents': typeof AgentsRoute
+  '/brief': typeof BriefRoute
   '/budget': typeof BudgetRoute
   '/flights': typeof FlightsRoute
   '/istanbul': typeof IstanbulRoute
   '/map': typeof MapRoute
   '/plan': typeof PlanRoute
   '/romania': typeof RomaniaRoute
+  '/security': typeof SecurityRoute
   '/train': typeof TrainRoute
 }
 export interface FileRouteTypes {
@@ -114,36 +132,42 @@ export interface FileRouteTypes {
     | '/'
     | '/admin'
     | '/agents'
+    | '/brief'
     | '/budget'
     | '/flights'
     | '/istanbul'
     | '/map'
     | '/plan'
     | '/romania'
+    | '/security'
     | '/train'
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
     | '/admin'
     | '/agents'
+    | '/brief'
     | '/budget'
     | '/flights'
     | '/istanbul'
     | '/map'
     | '/plan'
     | '/romania'
+    | '/security'
     | '/train'
   id:
     | '__root__'
     | '/'
     | '/admin'
     | '/agents'
+    | '/brief'
     | '/budget'
     | '/flights'
     | '/istanbul'
     | '/map'
     | '/plan'
     | '/romania'
+    | '/security'
     | '/train'
   fileRoutesById: FileRoutesById
 }
@@ -151,12 +175,14 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AdminRoute: typeof AdminRoute
   AgentsRoute: typeof AgentsRoute
+  BriefRoute: typeof BriefRoute
   BudgetRoute: typeof BudgetRoute
   FlightsRoute: typeof FlightsRoute
   IstanbulRoute: typeof IstanbulRoute
   MapRoute: typeof MapRoute
   PlanRoute: typeof PlanRoute
   RomaniaRoute: typeof RomaniaRoute
+  SecurityRoute: typeof SecurityRoute
   TrainRoute: typeof TrainRoute
 }
 
@@ -181,6 +207,13 @@ declare module '@tanstack/react-router' {
       path: '/agents'
       fullPath: '/agents'
       preLoaderRoute: typeof AgentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/brief': {
+      id: '/brief'
+      path: '/brief'
+      fullPath: '/brief'
+      preLoaderRoute: typeof BriefRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/budget': {
@@ -225,6 +258,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof RomaniaRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/security': {
+      id: '/security'
+      path: '/security'
+      fullPath: '/security'
+      preLoaderRoute: typeof SecurityRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/train': {
       id: '/train'
       path: '/train'
@@ -239,12 +279,14 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AdminRoute: AdminRoute,
   AgentsRoute: AgentsRoute,
+  BriefRoute: BriefRoute,
   BudgetRoute: BudgetRoute,
   FlightsRoute: FlightsRoute,
   IstanbulRoute: IstanbulRoute,
   MapRoute: MapRoute,
   PlanRoute: PlanRoute,
   RomaniaRoute: RomaniaRoute,
+  SecurityRoute: SecurityRoute,
   TrainRoute: TrainRoute,
 }
 export const routeTree = rootRouteImport

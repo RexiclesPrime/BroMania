@@ -9,6 +9,8 @@ import {
   Map,
   Menu,
   Plane,
+  Presentation,
+  Shield,
   TrainFront,
   Wallet,
   X,
@@ -20,11 +22,13 @@ const NAV = [
   { to: "/", label: "HQ", icon: Compass },
   { to: "/map", label: "Map", icon: Map },
   { to: "/plan", label: "Itinerary", icon: CalendarDays },
+  { to: "/brief", label: "Briefing", icon: Presentation },
   { to: "/istanbul", label: "Istanbul", icon: Landmark },
   { to: "/train", label: "Crossing", icon: TrainFront },
   { to: "/romania", label: "Romania", icon: Castle },
   { to: "/flights", label: "Flights", icon: Plane },
   { to: "/admin", label: "Admin", icon: ClipboardList },
+  { to: "/security", label: "Security", icon: Shield },
   { to: "/budget", label: "Budget", icon: Wallet },
   { to: "/agents", label: "Swarm", icon: Bot },
 ] as const;
@@ -49,7 +53,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
               <span className="ml-1.5 text-[0.65rem] tracking-[0.16em] text-muted">MMXXVII</span>
             </span>
           </Link>
-          <nav className="hidden items-center xl:flex">
+          <nav className="hidden items-center 2xl:flex">
             {NAV.map((item) => (
               <Link
                 key={item.to}
@@ -65,7 +69,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </nav>
           <button
             type="button"
-            className="grid size-11 place-items-center rounded-sm border border-border xl:hidden"
+            className="grid size-11 place-items-center rounded-sm border border-border 2xl:hidden"
             aria-label={open ? "Close menu" : "Open menu"}
             onClick={() => setOpen((v) => !v)}
           >
@@ -73,7 +77,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
           </button>
         </div>
         {open ? (
-          <nav className="grid gap-1 border-t border-border px-4 py-3 xl:hidden">
+          <nav className="grid gap-1 border-t border-border px-4 py-3 2xl:hidden">
             {NAV.map((item) => (
               <Link
                 key={item.to}

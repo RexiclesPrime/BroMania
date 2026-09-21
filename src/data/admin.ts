@@ -223,7 +223,7 @@ export const BOOKINGS: BookingTask[] = [
     title: "Travel insurance, five names",
     when: "The day the air is ticketed.",
     where: "Allianz or the card's trip-cancel if it actually covers multi-city. One policy, five travelers, 14–25 Sep 2027.",
-    how: "Medical plus trip interruption. Romania driving days included. Send the PDF to the crew.",
+    how: "Medical plus trip interruption, including Romania driving days. Send the PDF to the crew. Do not buy a separate kidnap-and-ransom policy — that is the wrong product for Karaköy and Brașov. If this policy includes a tiny K&R rider for free, take it. Medical and a medevac flight are the failures that cost money.",
     swarm: "Inbox Clerk logs the policy number. You buy it.",
     url: "https://www.allianztravelinsurance.com/",
     urlLabel: "Allianz trip insurance",
