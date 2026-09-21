@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { PageHead, Panel } from "@/components/shell";
 import { LINKS, RAIL_ALERT, ROUTING, type RoutingId } from "@/data/trip";
 import { useTripStore } from "@/lib/store";
-import { formatUsd } from "@/lib/utils";
+import { asset, formatUsd } from "@/lib/utils";
 
 export const Route = createFileRoute("/train")({ component: TrainPage });
 
@@ -20,7 +20,7 @@ function TrainPage() {
       />
 
       <img
-        src="/images/sleeper.jpg"
+        src={asset("/images/sleeper.jpg")}
         alt="European sleeper compartment"
         className="h-72 w-full rounded-xl object-cover"
       />

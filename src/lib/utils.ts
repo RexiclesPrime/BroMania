@@ -5,6 +5,13 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
 
+/** Public-file URL that still works when the HQ is served from /BroMania/ on GitHub Pages. */
+export function asset(path: string) {
+  const base = (import.meta.env.BASE_URL ?? "/").replace(/\/$/, "");
+  const suffix = path.startsWith("/") ? path : `/${path}`;
+  return `${base}${suffix}`;
+}
+
 export function formatUsd(n: number) {
   return new Intl.NumberFormat("en-US", {
     style: "currency",

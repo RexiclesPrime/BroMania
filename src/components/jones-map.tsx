@@ -2,7 +2,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState, type RefObject }
 import { Pause, Play, RotateCcw } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import type { RoutingId } from "@/data/trip";
-import { cn } from "@/lib/utils";
+import { cn, asset } from "@/lib/utils";
 
 type Scene = "atlantic" | "balkans";
 type Mode = "air" | "rail" | "van";
@@ -590,7 +590,7 @@ function AtlanticChart({
       role="img"
       aria-label="Animated parchment map from Dulles to Istanbul"
     >
-      <image href="/images/map-atlantic.jpg" width={ATLANTIC.w} height={ATLANTIC.h} />
+      <image href={asset("/images/map-atlantic.jpg")} width={ATLANTIC.w} height={ATLANTIC.h} />
       <Line d={d} width={8} live={!done} liveRef={liveRef} underRef={underRef} />
       <TravelerMark mode={mode} scale={2.3} travelerRef={travelerRef} />
       {ATLANTIC_STAMPS.map((s) => (
@@ -630,7 +630,7 @@ function BalkansChart({
       role="img"
       aria-label="Animated parchment map of the Balkan crossing and Transylvania"
     >
-      <image href="/images/map-balkans.jpg" width={BALKANS.w} height={BALKANS.h} />
+      <image href={asset("/images/map-balkans.jpg")} width={BALKANS.w} height={BALKANS.h} />
       {legs.slice(0, Math.max(0, legIndex)).map((leg) => (
         <Line key={leg.id} d={leg.d} width={6.5} />
       ))}

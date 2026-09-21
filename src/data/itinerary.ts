@@ -1,4 +1,4 @@
-import { addDays } from "@/lib/utils";
+import { addDays, asset } from "@/lib/utils";
 import { ROUTING, WINDOWS, type RoutingId, type WindowId } from "./trip";
 
 export type Opportunity = {
@@ -60,7 +60,7 @@ const ISTANBUL_CORE: Template[] = [
     chapter: "Istanbul",
     title: "Land, water, first table",
     lodging: "Galata / Karaköy",
-    image: "/images/karakoy.jpg",
+    image: asset("/images/karakoy.jpg"),
     vibe: "Jet lag vs. the Horn",
     today: "Land in Istanbul in the afternoon. One van to the apartment. Walk the neighborhood. Dinner. No museums tonight.",
     job: "Admin: apartment and airport van already booked. Everyone: do not take five separate taxis.",
@@ -94,7 +94,7 @@ const ISTANBUL_CORE: Template[] = [
     chapter: "Istanbul",
     title: "The old city, once",
     lodging: "Galata / Karaköy",
-    image: "/images/istanbul-hagia.jpg",
+    image: asset("/images/istanbul-hagia.jpg"),
     vibe: "Empire before lunch",
     today: "Hagia Sophia when it opens. Then the underground cistern. One more museum only if you still have legs. Long trousers all day.",
     job: "Admin: buy Hagia Sophia and cistern tickets before this morning. Everyone: shoulders covered, downstairs by 8am.",
@@ -134,7 +134,7 @@ const ISTANBUL_CORE: Template[] = [
     chapter: "Istanbul",
     title: "Hammam and the strait",
     lodging: "Galata / Karaköy",
-    image: "/images/galata.jpg",
+    image: asset("/images/galata.jpg"),
     vibe: "Steam, then two continents",
     today: "Boat on the Bosphorus in the morning. Turkish bath at 4:30pm — not 9am. Dinner. Pack for the train tomorrow.",
     job: "Admin: book the bath for five men after 4:30pm. Everyone: spare underwear for the bath.",
@@ -172,7 +172,7 @@ function sofiaLink(startOffset: number): Template[] {
       chapter: "The crossing",
       title: "The countryside sleeper",
       lodging: "Three 2-berth TVS2000s",
-      image: "/images/sleeper.jpg",
+      image: asset("/images/sleeper.jpg"),
       vibe: "The story you asked for",
       today: "Easy morning. Buy food for the train. Leave the apartment at 4pm. Night train at 8pm. There is no restaurant on board.",
       job: "Admin: train tickets already bought. Everyone: help buy the picnic, passport in your pocket, do not be late for 4pm.",
@@ -315,7 +315,7 @@ function romaniaDays(startOffset: number, routing: RoutingId): Template[] {
       chapter: "Transylvania",
       title: "Bran for the silhouette, Brașov for the town",
       lodging: "Brașov old town",
-      image: "/images/bran-castle.jpg",
+      image: asset("/images/bran-castle.jpg"),
       vibe: "The postcard, on purpose",
       today: "Bran Castle (the postcard), then Râșnov (the better ruin), then Brașov town. It is a Monday — the castle may not open until noon.",
       job: "Admin: Bran tickets, or cash at the gate. Driver: out on time. Everyone: no Dracula dinner show.",
@@ -349,7 +349,7 @@ function romaniaDays(startOffset: number, routing: RoutingId): Template[] {
       chapter: "Transylvania",
       title: "Poenari — the real citadel",
       lodging: "Brașov",
-      image: "/images/poenari.jpg",
+      image: asset("/images/poenari.jpg"),
       vibe: "You earn this one",
       today: "Leave at 7am. Three-hour drive. Climb 1,480 steps to Vlad's actual fortress. Drive home before dark.",
       job: "Admin: small cash in lei at the steps. Everyone: boots, water, no racing. Do not add the high mountain road — you would get back at midnight.",
@@ -383,7 +383,7 @@ function romaniaDays(startOffset: number, routing: RoutingId): Template[] {
       chapter: "Transylvania",
       title: "Under the mountain, then a palace",
       lodging: "Brașov",
-      image: "/images/salt-mine.jpg",
+      image: asset("/images/salt-mine.jpg"),
       vibe: "Bond set, then a fever dream",
       today: "Salt mine in the morning — bring a sweater. Palace on the way home in the afternoon.",
       job: "Admin: Peleș tickets already bought for the afternoon, not 9am. Everyone: sweater. Cash at the mine window.",

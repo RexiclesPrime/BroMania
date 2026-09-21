@@ -2,6 +2,8 @@
 
 Five guys. Dulles → Istanbul → a night train to Sofia → Transylvania. **15–25 Sep 2027.**
 
+**Share this HQ:** [rexiclesprime.github.io/BroMania](https://rexiclesprime.github.io/BroMania/)
+
 This is the planning HQ: the week, the bookings, the bags.
 
 ## The trip
@@ -29,8 +31,10 @@ Opens on port 8080.
 | --- | --- |
 | HQ | The week, two jobs, locked calls |
 | Itinerary | Each day: **Today** and **Your job** |
+| Briefing | Slide deck for the crew |
 | Admin | Booking list, tickets, train food, ExtraFly packing |
 | Crossing | Why Bucharest rail is closed in 2027, and the Sofia plan |
+| Security | What can go wrong, including kidnap and ransom |
 | Flights / Budget / Swarm | Air, money, research bots |
 
 Prices are 2026 guesses for 2027. Not a quote.

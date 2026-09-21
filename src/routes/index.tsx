@@ -20,7 +20,7 @@ import {
   type WindowId,
 } from "@/data/trip";
 import { useTripStore } from "@/lib/store";
-import { daysUntil, formatLongDate, formatUsd } from "@/lib/utils";
+import { daysUntil, formatLongDate, formatUsd, asset } from "@/lib/utils";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -38,7 +38,7 @@ function Home() {
     <div className="flex flex-col gap-8">
       <section className="relative overflow-hidden rounded-xl border border-border">
         <img
-          src="/images/istanbul-hagia.jpg"
+          src={asset("/images/istanbul-hagia.jpg")}
           alt="Hagia Sophia from the water at golden hour"
           className="h-[420px] w-full object-cover md:h-[520px]"
         />
@@ -293,9 +293,9 @@ function Home() {
 
       <div className="grid gap-3 sm:grid-cols-3">
         {[
-          { src: "/images/galata.jpg", cap: "Karaköy, not Sultanahmet" },
-          { src: "/images/poenari.jpg", cap: "Poenari. 1,480 steps. The real citadel." },
-          { src: "/images/bran-castle.jpg", cap: "Bran for the photo, Poenari for Vlad" },
+          { src: asset("/images/galata.jpg"), cap: "Karaköy, not Sultanahmet" },
+          { src: asset("/images/poenari.jpg"), cap: "Poenari. 1,480 steps. The real citadel." },
+          { src: asset("/images/bran-castle.jpg"), cap: "Bran for the photo, Poenari for Vlad" },
         ].map((p) => (
           <figure key={p.src} className="overflow-hidden rounded-lg border border-border">
             <img src={p.src} alt={p.cap} className="h-48 w-full object-cover" />

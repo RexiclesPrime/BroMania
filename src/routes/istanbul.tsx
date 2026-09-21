@@ -8,7 +8,7 @@ import {
   ISTANBUL_STAY,
 } from "@/data/trip";
 import { useTripStore } from "@/lib/store";
-import { formatUsd } from "@/lib/utils";
+import { asset, formatUsd } from "@/lib/utils";
 
 export const Route = createFileRoute("/istanbul")({ component: IstanbulPage });
 
@@ -26,7 +26,7 @@ function IstanbulPage() {
 
       <div className="grid gap-4 md:grid-cols-2">
         <img
-          src="/images/galata.jpg"
+          src={asset("/images/galata.jpg")}
           alt="Galata Tower at dusk"
           className="h-72 w-full rounded-xl object-cover"
         />

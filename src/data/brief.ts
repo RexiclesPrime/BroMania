@@ -1,3 +1,5 @@
+import { asset } from "@/lib/utils";
+
 export type BriefPoint = { lead: string; body: string };
 
 export type BriefSlide =
@@ -73,7 +75,7 @@ export type BriefSlide =
       image: string;
     };
 
-export const BRIEF_FILE = "/brief/Bromania-MMXXVII.pptx";
+export const BRIEF_FILE = asset("/brief/Bromania-MMXXVII.pptx");
 
 export const SLIDES: BriefSlide[] = [
   {
@@ -83,7 +85,7 @@ export const SLIDES: BriefSlide[] = [
     title: "Project Bromania MMXXVII",
     subtitle: "Dulles. Istanbul. A countryside sleeper. Transylvania.",
     footer: "15–25 September 2027",
-    image: "/images/poenari.jpg",
+    image: asset("/images/poenari.jpg"),
   },
   {
     id: "deal",
@@ -165,7 +167,7 @@ export const SLIDES: BriefSlide[] = [
       "Thursday: the old city once, at opening, then we leave.",
       "Friday: the strait, then steam. Pack for the train.",
     ],
-    image: "/images/karakoy.jpg",
+    image: asset("/images/karakoy.jpg"),
   },
   {
     id: "old-city",
@@ -178,7 +180,7 @@ export const SLIDES: BriefSlide[] = [
       "Gallery ticket is about €25. The museum pass does not work here.",
       "Cistern: yerebatan.com or the window. Never a site named basilica-cistern.com.",
     ],
-    image: "/images/istanbul-hagia.jpg",
+    image: asset("/images/istanbul-hagia.jpg"),
   },
   {
     id: "hammam",
@@ -191,7 +193,7 @@ export const SLIDES: BriefSlide[] = [
       "16:30 — 16th-century bath, five of you, a very serious man with a mitt. Spare underwear.",
       "20:00 — last Karaköy table. Picnic is tomorrow morning, not tonight.",
     ],
-    image: "/images/galata.jpg",
+    image: asset("/images/galata.jpg"),
   },
   {
     id: "rail",
@@ -216,7 +218,7 @@ export const SLIDES: BriefSlide[] = [
       "Leave the apartment at 4pm. Halkalı is 45–70 minutes west. The station is not a grocery store.",
       "Train at 8pm. Passports in your pocket. Heavier guys get the lower beds.",
     ],
-    image: "/images/sleeper.jpg",
+    image: asset("/images/sleeper.jpg"),
   },
   {
     id: "castles",
@@ -255,7 +257,7 @@ export const SLIDES: BriefSlide[] = [
       "The ruin is small. The cliff is the point.",
       "Vidraru Dam for lunch. Same road home.",
     ],
-    image: "/images/poenari.jpg",
+    image: asset("/images/poenari.jpg"),
   },
   {
     id: "salt",
@@ -268,7 +270,7 @@ export const SLIDES: BriefSlide[] = [
       "Peleș is timed. Book an afternoon slot. Closed Monday and Tuesday.",
       "Skip the little castle next door.",
     ],
-    image: "/images/salt-mine.jpg",
+    image: asset("/images/salt-mine.jpg"),
   },
   {
     id: "money",
@@ -355,6 +357,6 @@ export const SLIDES: BriefSlide[] = [
     kicker: "Project Bromania MMXXVII",
     title: "The postcard is Bran. The story is Poenari. The night is the train.",
     lines: ["Questions.", "Then we book."],
-    image: "/images/bran-cliff.jpg",
+    image: asset("/images/bran-cliff.jpg"),
   },
 ];

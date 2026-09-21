@@ -1,3 +1,5 @@
+import { asset } from "@/lib/utils";
+
 export type WindowId = "sep" | "oct";
 export type RoutingId = "sofia" | "fly" | "bus";
 
@@ -236,7 +238,7 @@ export const ISTANBUL_EVENTS = [
 export const ISTANBUL_DAYS = [
   {
     title: "Arrive, water, first table",
-    image: "/images/karakoy.jpg",
+    image: asset("/images/karakoy.jpg"),
     pitch:
       "First night is not for monuments. It is for the neighborhood you will live in: the water, a roof, and a table that does not close at nine. Sultanahmet after dark is a postcard with the lights off. Karaköy is still a city.",
     beats: [
@@ -259,7 +261,7 @@ export const ISTANBUL_DAYS = [
   },
   {
     title: "The old city, once",
-    image: "/images/istanbul-hagia.jpg",
+    image: asset("/images/istanbul-hagia.jpg"),
     pitch:
       "You get one day in the old city. Do it at opening, in long trousers, and then leave. The mistake is stacking three mosques, the Grand Bazaar, and Topkapı until everyone hates Istanbul.",
     beats: [
@@ -282,7 +284,7 @@ export const ISTANBUL_DAYS = [
   },
   {
     title: "Hammam and the strait",
-    image: "/images/galata.jpg",
+    image: asset("/images/galata.jpg"),
     pitch:
       "The Istanbul day that is not a museum. The water the whole trip is named after, then a 16th-century bath. The Bosporus Express cannot run to Bucharest in 2027. The Bosporus itself is still here.",
     beats: [
@@ -309,7 +311,7 @@ export const ROMANIA_PILLARS = [
   {
     id: "bran",
     name: "Bran Castle",
-    image: "/images/bran-castle.jpg",
+    image: asset("/images/bran-castle.jpg"),
     status: "live" as const,
     truth: "The postcard. Weak historical link to Vlad. Still worth 90 minutes because the silhouette is the silhouette, and you are 30 minutes from Brasov.",
     why: "This is the castle everyone already has in their head — turrets, cliff, the Dracula shot. You still go, because the silhouette is the silhouette. Then Râșnov, which is the better ruin. Bran is the photograph. Poenari, the next day, is the story.",
@@ -321,7 +323,7 @@ export const ROMANIA_PILLARS = [
   {
     id: "poenari",
     name: "Poenari Fortress",
-    image: "/images/poenari.jpg",
+    image: asset("/images/poenari.jpg"),
     status: "locked" as const,
     truth: "The real Vlad Țepeș citadel. 1,480 concrete steps, cliff, ruins, Argeș gorge. This is the boys-trip castle. Bran is the souvenir. Locked for Tuesday 21 Sep.",
     why: "Vlad Țepeș rebuilt this citadel in the 1450s as a mountain stronghold against the Ottomans. He did not live at Bran. He used Poenari. The Ottomans wrecked it. What is left is broken wall, wind, and a drop into the Argeș gorge. You climb 1,480 concrete steps cut into the rock — no tram, no skip-the-line, no gift-shop gauntlet first. Forty-five minutes up. At the top: a courtyard the Impaler actually held. Five healthy men in their forties walking a cliff to that, in autumn, with nobody selling capes. That is the dude-trip photograph. Bran was the postcard. This is the story.",
@@ -333,7 +335,7 @@ export const ROMANIA_PILLARS = [
   {
     id: "salt",
     name: "Slănic Prahova salt mine",
-    image: "/images/salt-mine.jpg",
+    image: asset("/images/salt-mine.jpg"),
     status: "live" as const,
     truth: "Unirea chamber is the size of a stadium, 208 m underground, 13–16°C. Salina Turda is prettier as a theme park — and five hours from Brasov. The sleeper calendar still fits this after Poenari.",
     why: "A mountain hollowed into an arena: ferris wheel, football pitch, walls of salt. It looks like a Bond set. Turda is the famous one and it is five hours away. Slănic is the mine that actually fits a Brașov week — and after Poenari's steps, 13°C air is a gift.",
